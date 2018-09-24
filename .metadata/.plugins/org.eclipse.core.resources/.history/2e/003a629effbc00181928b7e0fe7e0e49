@@ -1,0 +1,5 @@
+package inloggen.dao;
+
+public interface IPersonDao {
+
+}

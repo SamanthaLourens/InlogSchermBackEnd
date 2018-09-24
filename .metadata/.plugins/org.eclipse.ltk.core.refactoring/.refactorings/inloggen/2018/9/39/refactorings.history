@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;inloggen.config.Config.java&apos; to &apos;CorsFilter.java&apos;&#x0D;&#x0A;- Original project: &apos;inloggen&apos;&#x0D;&#x0A;- Original element: &apos;inloggen.config.Config.java&apos;&#x0D;&#x0A;- Renamed element: &apos;inloggen.config.CorsFilter.java&apos;" description="Rename compilation unit &apos;Config.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;inloggen.config{Config.java" name="CorsFilter.java" references="false" stamp="1537792984821" version="1.0"/>
+</session>

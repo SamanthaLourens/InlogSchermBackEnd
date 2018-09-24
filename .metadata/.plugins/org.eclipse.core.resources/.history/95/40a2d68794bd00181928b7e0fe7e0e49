@@ -1,0 +1,16 @@
+package inloggen.service;
+
+import inloggen.model.PersonModel;
+import java.util.*;
+
+
+public interface IPersonService {
+	
+	public List<PersonModel> findByName(String naam);
+
+	public List<PersonModel> findByLastName(String lastName);
+	
+	public Optional<PersonModel> findById(Long id);
+	
+	public List<PersonModel> findAll();
+}

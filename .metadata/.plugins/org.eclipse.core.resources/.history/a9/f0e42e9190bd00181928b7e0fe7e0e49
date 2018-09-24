@@ -1,0 +1,12 @@
+package inloggen.dao;
+
+import org.springframework.data.repository.CrudRepository;
+import inloggen.model.PersonModel;
+
+
+
+public interface IPersonDao extends CrudRepository<PersonModel, Long>{
+	
+	public boolean findPerson();    //Om te checken of persoon in het bestand voorkomt returnt hij een true of false
+	
+}

@@ -1,0 +1,49 @@
+package inloggen.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
+import inloggen.service.*;
+import inloggen.model.*;
+import java.util.*;
+
+
+
+@RestController
+public class PersonController {
+
+	@Autowired
+	private IPersonService iPersonService;
+	
+	
+	@GetMapping("/api/person/all")
+	public List<PersonModel> findAll(){
+		return this.iPersonService.findAll();
+	}
+	
+	@GetMapping("/api/person/name/{naam}")
+	public List<PersonModel> findByName(@PathVariable String naam){
+		return this.iPersonService.findByName(naam);
+	}
+	
+	@GetMapping("/api/person/lastname/{lastname}")
+	public List<PersonModel> findByLastName(@PathVariable String lastName){
+		return this.iPersonService.findByLastName(lastName);
+	}
+	
+	@GetMapping("/api/person/fullname/{name}{lastName}")
+	public List<PersonModel> findByFullName(@PathVariable String name, String lastName){
+		return this.iPersonService.findByFullName(name, lastName);
+	}
+	
+	
+	@GetMapping("/api/person/id/{id}")
+	public Optional<PersonModel> findById(@PathVariable Long id){
+		return this.iPersonService.findById(id);
+	}
+
+}
+
+
+

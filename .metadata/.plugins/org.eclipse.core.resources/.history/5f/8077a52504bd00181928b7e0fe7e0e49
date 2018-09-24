@@ -1,0 +1,10 @@
+package inloggen.service;
+
+import inloggen.model.PersonModel;
+
+
+public interface IPersonService {
+	
+	public PersonModel findByName();
+
+}

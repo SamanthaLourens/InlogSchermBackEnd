@@ -1,0 +1,11 @@
+package inloggen.service;
+
+import inloggen.model.PersonModel;
+import java.util.List;
+
+
+public interface IPersonService {
+	
+	public List<PersonModel> findByName(String naam);
+
+}

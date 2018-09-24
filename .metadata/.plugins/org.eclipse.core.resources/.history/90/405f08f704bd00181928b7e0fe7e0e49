@@ -1,0 +1,25 @@
+package inloggen.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import inloggen.dao.IPersonDao;
+import inloggen.model.PersonModel;
+
+
+@Service
+public class PersonService implements IPersonService {
+	
+	@Autowired
+	private IPersonDao iPersonDao;
+	
+	public Optional<PersonModel> findByName(String naam) {
+		if (id < 0)
+			return Optional.empty();
+
+		return this.iPersonDao.findByName(naam);
+	}
+
+	
+}

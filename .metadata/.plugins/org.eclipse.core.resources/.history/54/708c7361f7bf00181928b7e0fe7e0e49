@@ -1,0 +1,5 @@
+package inloggen.config;
+
+public class Config {
+
+}

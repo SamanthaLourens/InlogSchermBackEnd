@@ -1,0 +1,28 @@
+package inloggen.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
+import inloggen.service.*;
+import inloggen.model.*;
+import java.util.*;
+
+
+
+@RestController
+public class PersonController {
+
+	@Autowired
+	private IPersonService iPersonService;
+	
+	
+	@GetMapping("/api/person/all")
+	public List<PersonModel> findAll(){
+		return this.iPersonService.findAll();
+	}
+
+}
+
+
+

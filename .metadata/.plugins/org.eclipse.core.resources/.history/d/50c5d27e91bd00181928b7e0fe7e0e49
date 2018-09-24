@@ -1,0 +1,23 @@
+package inloggen.service;
+
+import java.util.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import inloggen.dao.IPersonDao;
+import inloggen.model.PersonModel;
+
+
+@Service
+public class PersonService implements IPersonService {
+	
+	@Autowired
+	private IPersonDao iPersonDao;
+	
+	@Override
+	public List<PersonModel> findByName(String naam){
+		return this.iPersonDao.findByName(naam);
+	} 	
+	
+	
+	
+}

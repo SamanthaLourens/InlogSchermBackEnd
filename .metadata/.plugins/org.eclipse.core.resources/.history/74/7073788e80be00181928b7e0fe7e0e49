@@ -1,0 +1,5 @@
+package inloggen.dto;
+
+public class PersonDto {
+
+}

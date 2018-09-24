@@ -1,0 +1,14 @@
+package inloggen.dao;
+
+import java.util.Optional;
+
+import org.springframework.data.repository.CrudRepository;
+import inloggen.model.PersonModel;
+
+
+
+public interface IPersonDao extends CrudRepository<PersonModel, Long>{
+	
+	public List<PersonModel> findByName(String naam);   
+	
+}
